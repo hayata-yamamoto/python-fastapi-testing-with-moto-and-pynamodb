@@ -49,3 +49,6 @@ class TestApp(TestCase):
         r = self.test_client.put(url=f"/items/{self.test_item.id}", json=payload)
         self.assertEqual(200, r.status_code)
         self.assertEqual(self.test_item.version + 1, r.json()["version"])
+
+        after_item = Item.get(self.test_item.id)
+        self.assertNotEqual(after_item.serialize(), self.test_item.serialize())
