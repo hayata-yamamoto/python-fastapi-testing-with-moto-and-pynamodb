@@ -1,4 +1,4 @@
-# Example Code of moto-based DynamoDB with FastAPI 
+# Example code of moto-based DynamoDB with FastAPI 
 
 Japanese version is [here](). 
 
